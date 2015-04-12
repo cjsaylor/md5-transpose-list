@@ -1,6 +1,6 @@
 var q = require('q');
 var Transpose = function(md5) {
-    this.md5 = md5();
+    this.md5 = md5;
 };
 
 /**
@@ -32,7 +32,7 @@ Transpose.prototype.transpose = function(files, isAbsolutePath) {
 
 module.exports = function(container) {
     container = container || {};
-    return new Transpose(container.md5 || require('md5-file-promise'));
+    return new Transpose(container.md5 || require('md5-file-promise')());
 };
 module.exports.$type = 'factory';
 module.exports.$name = 'md5TransposeList';
