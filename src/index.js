@@ -35,4 +35,4 @@ module.exports = function(container) {
     return new Transpose(container.md5 || require('md5-file-promise'));
 };
 module.exports.$type = 'factory';
-module.exports.$name = 'md5-transpose-list';
+module.exports.$name = 'md5TransposeList';
